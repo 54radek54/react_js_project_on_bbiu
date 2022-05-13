@@ -4,6 +4,7 @@ import TicTacToe from "../Pages/Game/TicTacToe";
 import Home from "../Pages/Home/Home";
 import Carousel from "../Pages/ImageCarousel/Carousel";
 import Table from "../Pages/Table/Table";
+import Form from "../Pages/Form/Form";
 
 const SidebarRouting = () => {
     return (
@@ -16,6 +17,9 @@ const SidebarRouting = () => {
             </Route>
             <Route path="/carousel">
                 <Carousel/>
+            </Route>
+            <Route path="/form">
+                <Form/>
             </Route>
             <Route path="/table">
                 <Table/>

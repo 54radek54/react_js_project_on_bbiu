@@ -8,25 +8,22 @@ body {
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
 }
 ul{
+  width: 10%;
+  justify-items: center;
   display: grid;
-  justify-content: center;
-  align-content: center;
   grid-template-columns: repeat(3, auto);
   list-style-type: none;
+  padding: 0;
 }
 
 .bi{
   margin-top: 15px;
   color: white;
-  margin-left: 40px;
 }
 .bi:hover {
   color: dodgerblue;
   transition-duration: 1s;
-}
-.first{
-  margin-left: 0;
 }

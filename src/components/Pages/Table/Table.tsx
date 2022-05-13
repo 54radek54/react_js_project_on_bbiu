@@ -1,8 +1,18 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import "./Table.css"
+import {Course} from "../../../model/Course";
+import {CourseService} from "../../../service/CourseService";
 
 function Table() {
+    const [course, setCourse] = useState<Course[]>([])
+    const [keyword, setKeyword] = useState<string>("")
+    const [page, setPage] = useState<number>(0)
 
+    const service = new CourseService()
+
+    useEffect(()=> {
+        service.getCourseByKeyword(keyword, page).then((result) => setCourse(result as Course[])).catch(() => setCourse([]))
+    })
     return (
         <div className="content">
             {/*<h2 th:align="center">Search in User List</h2>*/}
@@ -10,13 +20,13 @@ function Table() {
             {/*  <input type="text" name="keyword" th:value="${keyword}" placeholder="Find by Name & Role & Email" size="50">*/}
             {/*    <button type="submit" className="btn btn-info">Search</button>*/}
             {/*</form>*/}
-            <section className="container">
-                <label htmlFor="search_bar">Search</label>
-                <input className="search_bar"
-                       name="search_bar"
-                       type="search"
-                       placeholder="Search"></input>
-            </section>
+            {/*<section className="container">*/}
+            {/*    <label htmlFor="search_bar">Search</label>*/}
+            {/*    <input className="search_bar"*/}
+            {/*           name="search_bar"*/}
+            {/*           type="search"*/}
+            {/*           placeholder="Search"></input>*/}
+            {/*</section>*/}
             <table>
                 <thead>
                 <tr>

@@ -24,7 +24,7 @@
     height: 10px;
 }
 .slides::-webkit-scrollbar-thumb {
-    background: black;
+    background: #2F323A;
     border-radius: 10px;
 }
 .slides::-webkit-scrollbar-track {

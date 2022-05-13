@@ -46,6 +46,7 @@
   "devDependencies": {
     "@types/react-burger-menu": "^2.8.3",
     "@types/react-router-dom": "^5.3.3",
-    "react-burger-menu": "^3.0.6"
+    "react-burger-menu": "^3.0.6",
+    "react-hook-form": "^7.30.0"
   }
 }

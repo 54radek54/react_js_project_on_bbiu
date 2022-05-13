@@ -7,6 +7,7 @@ import Home from "../Pages/Home/Home";
 import {bubble as Menu} from 'react-burger-menu';
 import Carousel from "../Pages/ImageCarousel/Carousel";
 import Table from "../Pages/Table/Table";
+import Form from "../Pages/Form/Form";
 
 interface sideNavigation {
     link: string,
@@ -30,6 +31,11 @@ const Sidebar = () => {
             link: 'carousel',
             component: Carousel,
             label: 'Image Carousel',
+        },
+        {
+            link: 'form',
+            component: Form,
+            label: 'Form',
         },
         {
             link: 'table',
