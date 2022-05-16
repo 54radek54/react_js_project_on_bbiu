@@ -43,6 +43,9 @@ section {
     cursor: pointer;
     font-size: 50px;
 }
+.active{
+    color: red;
+}
 
 .game-status {
     font-size: 20px;
@@ -53,13 +56,17 @@ section {
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    background-color: #f7e4ac;
-    width: 200px;
-    height: 50px;
-    font-size: 25px;
-    color: #5586e2;
-    box-shadow: 2px 2px 2px 2px #d86c23;
-    border: 2px solid #d86c23;
+    background: #2F323A;
+    color: white;
+    text-transform: uppercase;
+    border: none;
+    padding: 20px;
+    font-size: 16px;
+    border-radius: 10px;
+    width: 50%;
+    font-weight: 400;
+    letter-spacing: 0.5rem;
+    transition: 0.3s all;
 }
 
 .box:nth-child(1),

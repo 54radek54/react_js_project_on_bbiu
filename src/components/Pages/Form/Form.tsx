@@ -20,6 +20,7 @@ function Form() {
     const service = new CourseService()
 
     const handleSubmit = () => {
+        setMessage("")
         if(name!=="" && tutor!=="" && cost!==""){
             service.createCourse(name, tutor, description, Number(cost)).then((result) => {
                 setCourse(result as Course)
@@ -41,14 +42,14 @@ function Form() {
     return (
         <div className={"content"}>
             <h2 className={"title"}>Course form</h2>
-            <form onSubmit={handleSubmit}>
-                <input className={"first"}
+            <div className={"form "} >
+                <input className={"first "+ (name===""? " empty":"")}
                        type="text"
                        value={name}
                        placeholder={"Course name"}
                        onChange={e => setName(e.target.value)}
                 />
-                <select onChange={e => setTutor(e.target.value)}>
+                <select onChange={e => setTutor(e.target.value)} className={tutor==="" ? " empty" : ""}>
                     <option value="">Tutor...</option>
                     <option value="Bartczyk">Bartczyk</option>
                     <option value="Bartczak">Bartczak</option>
@@ -56,6 +57,7 @@ function Form() {
                     <option value="Słomkowski">Słomkowski</option>
                 </select>
                 <input
+                    className={cost==="" ? " empty" : ""}
                     type="number"
                     value={cost}
                     placeholder={"Course cost"}
@@ -65,8 +67,8 @@ function Form() {
                     value={description}
                     onChange={e => setDescription(e.target.value)}
                     placeholder="Description"/>
-                <input type="submit" value="Submit"/>
-            </form>
+                <input type="submit" value="Submit" onClick={handleSubmit}/>
+            </div>
             {message === "" ? null : <Snackbar message={message}/>}
         </div>
     );

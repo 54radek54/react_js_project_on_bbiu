@@ -8,7 +8,7 @@
     font-family: "Arial", sans-serif;
 }
 
-form {
+.form {
     background: #bdc3c7;
     width: 35%;
     display: flex;
@@ -20,6 +20,10 @@ form {
 
 input:first-child {
     margin-top: 20px;
+}
+
+.empty{
+    border: red solid 3px;
 }
 
 .title {
@@ -40,7 +44,7 @@ input {
     box-sizing: border-box;
     width: 90%;
     border-radius: 4px;
-    border: 1px solid white;
+    /*border: 1px solid white;*/
     padding: 10px 15px;
     margin-bottom: 15px;
     font-size: 14px;

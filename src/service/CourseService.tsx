@@ -31,9 +31,17 @@ export class CourseService{
     }
 
         async getCourseByKeyword(keyword: string, page: number) {
-        return await fetch(`http://localhost:8080/courses`,
+        return await fetch(`http://localhost:8080/courses?page=${page}&keyword=${keyword}`,
             {
                 method: "GET",
+                // body: JSON.stringify({
+                //     keyword:keyword,
+                //     page:page
+                // }),
+                // headers: {
+                //     'Content-Type': 'application/json'
+                // },
+                mode:"no-cors"
             })
             .then((response) => {
                 if (response.ok) return response.json()
