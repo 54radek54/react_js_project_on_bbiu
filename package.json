@@ -44,10 +44,14 @@
     ]
   },
   "devDependencies": {
+    "@fortawesome/free-solid-svg-icons": "^6.1.1",
+    "@fortawesome/react-fontawesome": "^0.1.18",
+    "@hookform/resolvers": "^2.8.9",
     "@types/react-burger-menu": "^2.8.3",
     "@types/react-router-dom": "^5.3.3",
     "rc-pagination": "^3.1.16",
     "react-burger-menu": "^3.0.6",
-    "react-hook-form": "^7.30.0"
+    "react-hook-form": "^7.30.0",
+    "yup": "^0.32.11"
   }
 }

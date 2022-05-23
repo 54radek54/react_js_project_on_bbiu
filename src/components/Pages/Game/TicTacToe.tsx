@@ -77,7 +77,6 @@ function TicTacToe() {
     return (
         <div className={"game-content"}>
             <section>
-                <h1 className={"game-title"}>Simple Tic Tac Toe Game</h1>
                 <div className={"board"}>
                     {gameBoard.map((box, i) => (
                         <div key={i}

@@ -1,0 +1,73 @@
+.content{
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.sec {
+    width: 100%;
+    max-width: 420px;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    background-color: #2F323A;
+    border-radius: 1.5rem;
+}
+.titleRegistration{
+    font-size: 36px;
+    padding: 0;
+    color: white;
+}
+form {
+    padding-top: 15px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.input-user {
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+    width: 80%;
+    padding: 0.15rem;
+    border-radius: 0.5rem;
+    margin: 5px;
+}
+
+.submit {
+    width: 40%;
+    margin-top: 1rem;
+    padding: 0.5rem;
+}
+.submit:hover{
+    color: dodgerblue;
+    cursor: pointer;
+}
+
+.valid {
+    font-size: 0.8rem;
+    border-radius: 0.3rem;
+    border: 5px solid red;
+    background: white;
+    color: #2F323A;
+    padding: 0.25rem;
+    position: relative;
+}
+
+.hidden {
+    display: none;
+}
+
+.sub {
+    color: white;
+}
+.link{
+    color: white;
+}
+
+.link:hover{
+    color: dodgerblue;
+}

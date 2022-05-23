@@ -43,14 +43,13 @@
     font-size: 14px;
 }
 
-.button {
+.button{
     position: relative;
     background: #2F323A;
     color: white;
     text-transform: uppercase;
     border: none;
-    margin-top: 20px;
-    padding: 20px;
+    margin: 20px;
     font-size: 16px;
     display: block;
     border-radius: 10px;
@@ -62,4 +61,25 @@
 .button:hover{
     color: dodgerblue;
     cursor: pointer;
+}
+
+.confirm-button{
+    background: #2F323A;
+    color: white;
+    text-transform: uppercase;
+    border: none;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 20px;
+    width: 80px;
+    height: 60px;
+    margin:20px;
+}
+.confirm-button:hover{
+    color: dodgerblue;
+    cursor: pointer;
+}
+
+.confirmation-fields{
+    width: 100%;
 }

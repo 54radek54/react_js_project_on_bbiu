@@ -19,21 +19,30 @@ function Form() {
     })
     const service = new CourseService()
 
+    function exception() {
+        setCourse({
+            id: 0,
+            name: "",
+            description: "",
+            tutor: "",
+            cost: 0,
+        })
+        setMessage("Course couldn't be created right now!")
+    }
+
     const handleSubmit = () => {
         setMessage("")
-        if(name!=="" && tutor!=="" && cost!==""){
-            service.createCourse(name, tutor, description, Number(cost)).then((result) => {
+        if (name !== "" && tutor !== "" && cost !== "") {
+            service.createCourse(name.toLowerCase(), tutor.toLowerCase(), description.toLowerCase(), Number(cost)).then((result) => {
                 setCourse(result as Course)
                 setMessage("Course successfully created!")
-            }).catch(() => {setCourse({
-                id: 0,
-                name: "",
-                description: "",
-                tutor: "",
-                cost: 0,
-            })
-                setMessage("Course couldn't be created right now!")})
-        }else{
+                setName("")
+                setTutor("")
+                setCost("")
+                setDescription("")
+                window.location.reload()
+            }).catch(() => exception())
+        } else {
             setMessage("Enter fields")
         }
 
@@ -41,15 +50,18 @@ function Form() {
 
     return (
         <div className={"content"}>
-            <h2 className={"title"}>Course form</h2>
-            <div className={"form "} >
-                <input className={"first "+ (name===""? " empty":"")}
+
+            <div className={"form "}>
+                <h2 className={"titleForm"}>Course form</h2>
+                <input className={"input " + (name === "" ? " empty" : "")}
                        type="text"
                        value={name}
                        placeholder={"Course name"}
+                       required={true}
                        onChange={e => setName(e.target.value)}
                 />
-                <select onChange={e => setTutor(e.target.value)} className={tutor==="" ? " empty" : ""}>
+                <select onChange={e => setTutor(e.target.value)} className={"input " + (tutor === "" ? " empty" : "")}
+                        required={true}>
                     <option value="">Tutor...</option>
                     <option value="Bartczyk">Bartczyk</option>
                     <option value="Bartczak">Bartczak</option>
@@ -57,17 +69,19 @@ function Form() {
                     <option value="Słomkowski">Słomkowski</option>
                 </select>
                 <input
-                    className={cost==="" ? " empty" : ""}
+                    className={"input " + (cost === "" ? " empty" : "")}
                     type="number"
                     value={cost}
                     placeholder={"Course cost"}
                     onChange={e => setCost(e.target.value)}
+                    required={true}
+
                 />
-                <textarea
-                    value={description}
-                    onChange={e => setDescription(e.target.value)}
-                    placeholder="Description"/>
-                <input type="submit" value="Submit" onClick={handleSubmit}/>
+                <textarea className={"input"}
+                          value={description}
+                          onChange={e => setDescription(e.target.value)}
+                          placeholder="Description"/>
+                <input type="submit" value="Submit" className={"button"} onClick={handleSubmit}/>
             </div>
             {message === "" ? null : <Snackbar message={message}/>}
         </div>

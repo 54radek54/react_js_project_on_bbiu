@@ -11,7 +11,7 @@ body {
   justify-content: center;
 }
 ul{
-  width: 10%;
+  width: 14%;
   justify-items: center;
   display: grid;
   grid-template-columns: repeat(3, auto);

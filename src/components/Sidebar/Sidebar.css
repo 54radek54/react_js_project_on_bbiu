@@ -11,7 +11,7 @@
 }
 
 .bm-burger-bars-hover {
-    background: #a90000;
+    background: dodgerblue;
 }
 
 /* Position and sizing of clickable cross button */
@@ -68,4 +68,7 @@
 
 .bm-item:hover {
     color: #ffffff;
+}
+.content-sidebar{
+    min-height: 100vh;
 }

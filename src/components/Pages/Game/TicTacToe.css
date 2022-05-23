@@ -68,6 +68,9 @@ section {
     letter-spacing: 0.5rem;
     transition: 0.3s all;
 }
+.game-button:hover{
+    color: dodgerblue;
+}
 
 .box:nth-child(1),
 .box:nth-child(2),
